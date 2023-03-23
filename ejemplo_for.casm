@@ -1,0 +1,8 @@
+Function: main/0 
+Constants:None, 1, 10, 1 
+Locals: a, b, c
+Globals: print
+
+BEGIN
+    LOAD_CONST 
+END

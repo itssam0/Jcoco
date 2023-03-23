@@ -1,0 +1,51 @@
+Function: recursion/1 
+Constants:None, 1 
+Locals: x, n
+Globals: print, recursion
+
+BEGIN
+        LOAD_FAST       0
+        LOAD_FAST       1
+        COMPARE_OP      1
+        POP_JUMP_IF_FALSE final
+        LOAD_FAST       0
+        LOAD_CONST      1
+        BYNARY_ADD      
+        
+        STORE_FAST      0
+        LOAD_GLOBAL     1
+        LOAD_FAST       0
+        CALL_FUNCTION   1
+        JUMP_ABSOLUTE   terminar
+
+final:
+        LOAD_GLOBAL     0
+        LOAD_FAST       0
+        CALL_FUNCTION   1
+terminar:
+        LOAD_CONST      0
+        RETURN_VALUE
+
+END
+
+Function: main/0 
+Constants:None, 10, 1 
+Locals: x, n
+Globals: print, recursion
+
+BEGIN
+
+    LOAD_GLOBAL     1
+    LOAD_CONST      1
+    LOAD_CONST      2
+    CALL_FUNCTION   2
+    STORE_FAST      1
+    LOAD_GLOBAL     0
+    LOAD_FAST       1
+    CALL_FUNCTION   1
+    
+    POP_TOP         
+    LOAD_CONST      0
+    RETURN_VALUE
+
+END
